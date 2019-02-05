@@ -1,8 +1,6 @@
 # BasicAddressFields
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/basic_address_fields`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Welcome to BasicAddressFields gem. This will generate a migration which add basic address attributes to your rails models like address, city, state, country.
 
 ## Installation
 
@@ -22,7 +20,13 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+This gem includes a rake task to generate and run the migration. You can this task like below:
+
+rails add_address_fields:generate_address_components['<model_name>']
+
+where add_address_fields is the namespace and the generate_address_components is the task. and the model_name is the argument to the task. 
+
+Example: rails add_address_fields:generate_address_components['employees']
 
 ## Development
 
